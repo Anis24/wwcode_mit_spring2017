@@ -8,8 +8,7 @@ Created on Sat Apr  8 21:02:25 2017
 
 #ask user to input initial data
 annual_salary=float(input('Enter your annual salary:'))
-portion_saved=input('Enter the percent of your salary to save, as a decimal:')
-portion_saved=float('0'+portion_saved)
+portion_saved=float(input('Enter the percent of your salary to save, as a decimal:'))
 total_cost=float(input('Enter the cost of your dream home:'))
 #make calculations
 down_payment=total_cost*0.25
