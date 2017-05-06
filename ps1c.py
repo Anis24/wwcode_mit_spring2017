@@ -42,15 +42,19 @@ while abs(savings - down_payment) >= 100 :
         if count%6==0:
             monthly_salary=monthly_salary+monthly_salary*semi_annual_raise
 #        print(monthly_salary)
-#    savings=(monthly_salary*(saving_rate/10000)+monthly_salary*(saving_rate/10000)*r/12)*month
-    if savings<down_payment:
+    if (monthly_salary*max_save_rate+monthly_salary*max_save_rate*r/12)*month<down_payment:
+        print('It is not possible to pay the down payment in three years.')
+        break
+    elif savings<down_payment:
         min_s=saving_rate
     else:
         max_s=saving_rate
     saving_rate=((min_s+max_s)/2)
     steps+=1
-print('Steps in bisection search:', steps)
-print('Best savings rate:', saving_rate/10000)
+if steps>0:
+    print('Steps in bisection search:', steps)
+    print('Best savings rate:', saving_rate/10000)
+
 
 
 
